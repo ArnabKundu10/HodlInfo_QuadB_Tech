@@ -1,0 +1,22 @@
+const express = require("express");
+const path = require("path");
+const app = express();
+const hbs = require("hbs");
+const connectDB = require("./conct");
+const mainRouter = require("./route");
+const port = process.env.PORT || 4000;
+const dynamicStore = path.join(__dirname, "../templates/views");
+const partialStore = path.join(__dirname, "../templates/partials");
+// const public = path.join(__dirname, "../public");
+// console.log(public);
+app.set("view engine", "hbs");
+app.set("views", dynamicStore);
+hbs.registerPartials(partialStore);
+connectDB();
+// app.use(express.static(public));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(mainRouter);
+app.listen(port, () => {
+  console.log(`connect with port ${port}`);
+});

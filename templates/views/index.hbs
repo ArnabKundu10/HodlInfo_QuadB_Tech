@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../../public/css/ind.css"/>
+    <title>HodlInfo</title>
+    <style>
+      body{
+   background-color: #191d28;
+   font-family: Oswald, sans-serif !important;
+}
+.r-btn{
+   background-color: #3dc6c1;
+   height: 40px;
+}
+.head-part-1,.maindetails .first{
+   color: #3dc6c1;
+   background-color: transparent;
+}
+.head-center,tbody tr{
+   background-color: #2e3241 !important;
+}
+tbody tr{
+  border-radius: 25px !important;
+}
+td{
+padding: 0.5%;
+font-weight: bolder;
+}
+th,td{
+  text-align: center;
+}
+table{
+    border-collapse: separate;
+    border-spacing: 0 1em;
+}
+.form-select{
+   border-color: transparent !important;
+   color: white !important;
+}
+.maindetails .second,.mainmiddledetails .second, thead,.foot{
+ color: #fff;
+  opacity: 0.5 ;
+}
+.foot{
+  border-top: 1px solid white;
+}
+tr td:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+tr td:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+a{
+  text-decoration: none !important;
+  color: inherit !important;
+}
+.timer{
+  background-color: transparent !important;
+  color: #3dc6c1 !important;
+  border: 2px solid white;
+  border-radius: 50px; 
+  border-top-color: #3dc6c1 !important;
+  border-right-color: #3dc6c1 !important;
+}
+    </style>
+  </head>
+  <body>
+    <header class="mb-3 pt-3">
+      <div class="head d-flex pt-3 pe-3">
+        <p class="head-part-1 fs-1 w-25 ms-4 ps-5 fw-bold" style="letter-spacing: 0.1em;">HOLDINFO</p>
+        <div
+          class="head-part d-flex w-50 justify-content-center text-white fw-bold fs-5"
+        >
+          <p class="ms-2 me-2">
+            <select class="form-select head-center rounded fw-bold fs-5">
+              <option selected>INR</option>
+            </select>
+          </p>
+          <p class="ms-2 me-2">
+            <select
+              class="form-select text-white head-center rounded fw-bold fs-5"
+            >
+              <option value="BTC" selected>BTC</option>
+              <option value="USDT">USDT</option>
+              <option value="ETH">ETH</option>
+            </select>
+          </p>
+          <p class="ms-2 me-2 ps-2 pe-2 pt-1 rounded head-center" style="height: 44px;">
+            <a href="https://wazirx.com/signup">BUY BTC</a>
+            </p>
+        </div>
+        <div class="head-part d-flex justify-content-around w-25">
+          <button class="timer r-btn me-1  fw-bold" style="height: 35px;">50</button>
+          <button class="r-btn ms-1 me-1 rounded  fw-bold text-white">
+           <i class="fa-brands fa-telegram me-2"></i> <a href="https://hodlinfo.com/connect/telegram">Connect Telegram</a>
+          </button>
+          <button class="r-btn ms-1  rounded fw-bold text-white">
+            MovingBtn
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+    <section>
+      <p
+        class="text-center bg-transparent fs-4"
+        style="color: #fff; opacity: 0.5"
+      >
+        Best Price To Trade
+      </p>
+      <div class="d-flex mt-2 mb-1 justify-content-around">
+        <div class="maindetails d-flex flex-column text-center">
+          <p class="first  fs-2 fw-bold">0.91%</p>
+          <p class="second">5 mins</p>
+        </div>
+        <div class="maindetails d-flex flex-column text-center">
+          <p class="first fs-2 fw-bold">1.47%</p>
+          <p class="second">1 Hour</p>
+        </div>
+        <div class="mainmiddledetails d-flex flex-column text-center">
+          <p class="fs-1 text-white fw-bolder"><i class="fa-solid fa-indian-rupee-sign me-2"></i>54,49,496</p>
+          <p class="second">Average BTC/INR net price including commission</p>
+        </div>
+        <div class="maindetails d-flex flex-column text-center">
+          <p class="first fs-2 fw-bold">10.53%</p>
+          <p class="second">1 Day</p>
+        </div>
+        <div class="maindetails d-flex flex-column text-center">
+          <p class="first fs-2 fw-bold">12.92%</p>
+          <p class="second">7 Days</p>
+        </div>
+      </div>
+    </section>
+    <section class="ps-5 pe-5">
+      <table class="text-white w-100 fs-3" id="tickersTable">
+        <thead >
+          <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Last</th>
+          <th>Buy</th>
+          <th>Sell</th>
+          <th>Volume</th>
+          <th>BaseUnit</th> 
+          </tr>   
+        </thead>
+        <tbody>
+          
+        </tbody>
+      </table>
+    </section>
+    </main>
+    <footer>
+      <div class="foot ps-3 pt-3 d-flex justify-content-between pe-2">
+      <div class="d-flex justify-content-around" style="width: 20%;">
+       <p>Copyright © 2019</p>
+       <p>HodlInfo.com</p>
+      </div>
+      <div style="width: 5%;">
+        <p>Support</p>
+      </div>
+      </div>
+    </footer>
+    <script>
+      async function fetchTickers() {
+            try {
+                const response = await fetch('http://localhost:4000/tickers');
+                const tickers = await response.json();
+
+                const tickersTableBody = document.getElementById('tickersTable').getElementsByTagName('tbody')[0];
+                tickersTableBody.innerHTML = '';
+
+                tickers.forEach((ticker,index) => {
+                    const row = tickersTableBody.insertRow();
+
+                    const indCell = row.insertCell(0);
+                    indCell.textContent = index+1;
+
+                    const nameCell = row.insertCell(1);
+                    nameCell.textContent = ticker.name;
+
+                    const lastCell = row.insertCell(2);
+                    lastCell.textContent = ticker.last;
+
+                    const buyCell = row.insertCell(3);
+                    buyCell.textContent = ticker.buy;
+
+                    const sellCell = row.insertCell(4);
+                    sellCell.textContent = ticker.sell;
+
+                    const volumeCell = row.insertCell(5);
+                    volumeCell.textContent = ticker.volume;
+
+                    const baseUnitCell = row.insertCell(6);
+                    baseUnitCell.textContent = ticker.base_unit;
+
+
+                    console.log('Row created:', row);
+                });
+            } catch (error) {
+                console.error('Error fetching tickers:', error);
+            }
+        }
+
+        fetchTickers();
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

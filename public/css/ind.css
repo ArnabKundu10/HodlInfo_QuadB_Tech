@@ -1,0 +1,18 @@
+body{
+   background-color: #191d28;
+   font-family: Oswald, sans-serif !important;
+}
+.r-btn{
+   background-color: #3dc6c1;
+}
+.head-part-1{
+   color: #3dc6c1;
+   background-color: transparent;
+}
+.head-center{
+   background-color: #2e3241 !important;
+}
+.form-select{
+   border-color: transparent !important;
+   color: white !important;
+}
